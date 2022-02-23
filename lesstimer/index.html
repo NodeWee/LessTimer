@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta property="og:title" content="LessTimer 简洁倒计时提醒" />
+  <meta name="description" content="网页版简洁倒计时提醒，番茄时间法。打开即用。" />
+  <meta property="og:description" content="网页版简洁倒计时提醒，番茄时间法。打开即用。" />
+
+  <link rel=" stylesheet" href="style.css">
+
+  <title>LessTimer by nodewee</title>
+
+  <!-- Global site tag (gtag.js) - Google Analytics -->
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-SVGRCKVCR4"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
+
+    gtag('config', 'G-SVGRCKVCR4');
+  </script>
+</head>
+
+<body>
+  <div class="countdown"><span id="countdown">00:00</span></div>
+
+  <div class="panel">
+    <div>
+      <input id="set_minutes" type="number" value="25" step="0.1" placeholder="minutes" />
+      <input id="set_notice" type="string" value="该歇歇了☕️, 保护眼睛👀哦" placeholder="notice" />
+    </div>
+
+    <button id="button" onclick="startTimer()">开始倒计时</button>
+
+  </div>
+
+  <audio id="sound">
+    <source src="notification.mp3" type="audio/mpeg" />
+    Your browser does not support the audio element.
+  </audio>
+
+
+  <div class="links">
+    <a href="https://github.com/NodeWee/LessTimer" target="_blank" title="GitHub">Source code</a>
+  </div>
+
+  <script src="./script.js"></script>
+
+
+
+</body>
+
+</html>
